@@ -4,7 +4,7 @@
     <router-link to="/ask">Ask</router-link> |
     <router-link to="/jobs">Jobs</router-link>
   </nav>
-  <router-view/>
+  <router-view/> 
 </template>
 
 <style>

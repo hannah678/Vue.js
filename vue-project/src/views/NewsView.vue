@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div v-for="user in users">{{ user.title }}</div>
+    <div v-for="user in this.$store.state.news">{{ user.title }}</div>
 </div>
 </template>
 <script>
@@ -13,13 +13,14 @@ export default{
         }
     },
     created(){
-        var vm = this;
-        fetchNewsList()
-            .then(function(response){
-                console.log(response);
-                vm.users = response.data;
-            })
-            .catch(error => console.log(error))
+        this.$store.dispatch('FETCH_NEWS');
+        // var vm = this;
+        // fetchNewsList()
+        //     .then(function(response){
+        //         console.log(response);
+        //         vm.users = response.data;
+        //     })
+        //     .catch(error => console.log(error))
     }    
 }
 </script>
