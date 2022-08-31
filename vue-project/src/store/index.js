@@ -9,6 +9,9 @@ export default createStore({
   mutations: {
   },
   actions: {
+    FETCH_NEWS(){
+      
+    }
   },
   modules: {
   }
