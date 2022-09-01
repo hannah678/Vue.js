@@ -8,10 +8,14 @@ export default createStore({
      jobs: [],
      ask: [], //리스트라서 []
      user: {}, //리스트 아닌 객체라서 {}
+     item: {},
   },
   getters: {
     fetchedAsk(state){
       return state.ask;
+    },
+    fetchedItem(state){
+      return state.item;
     }
   },
   mutations,
