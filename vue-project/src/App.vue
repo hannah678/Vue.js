@@ -8,27 +8,42 @@
   <transition name="fade">
     <router-view/>
   </transition>
+  
 </template>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
 }
-
+a{
+  text-decoration: none;
+  color:#34495e;
+}
+a:hover{
+  color:#30b77a;
+  text-decoration: underline;
+}
+a.router-link-exact-active{
+  text-decoration: underline;
+}
 nav {
   padding: 30px;
+  background-color: #2c3e50;
+  font-size:20px;
+  color: #aaa;
+
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #85f4c2;
 }
 
 .fade-enter-active,

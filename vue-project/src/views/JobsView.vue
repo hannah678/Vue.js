@@ -1,34 +1,12 @@
 <template>
 <div>
-    <!-- <div v-for="job in this.$store.state.jobs">
-        {{ job.title }}
-    </div> -->
-    <p v-for="job in this.$store.state.jobs">
-        <a :href="job.url">{{ job.title }}</a>
-        <br/><small>{{ job.time_ago }}, {{ job.domain }}</small>
-        <hr/>
-    </p>
+    <list-item></list-item>
 </div>
 </template>
 <script>
-import { fetchJobsList } from '../api'
+import ListItem from '../components/ListItem.vue';
 
-export default{ 
-    data(){
-        return{
-            jobs: []
-        }
-    },
-    created(){
-        this.$store.dispatch('FETCH_JOBS');
-
-        // fetchJobsList()
-        // .then(response => {
-        //     console.log(this);
-        //     console.log(response);
-        //     this.jobs = response.data;
-        // })
-        // .catch(error => console.log(error))
-    }
+export default{
+  components: { ListItem },     
 }
 </script>
