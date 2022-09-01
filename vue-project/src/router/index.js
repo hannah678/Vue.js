@@ -32,7 +32,7 @@ const routes = [
     component:UserView,
   },
   {
-    path: '/ask/item/:id',
+    path: '/item/:id',
     component:ItemView,
   }
 ]

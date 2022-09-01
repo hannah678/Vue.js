@@ -4,7 +4,6 @@
     <router-link to="/ask">Ask</router-link> |
     <router-link to="/jobs">Jobs</router-link>
   </nav>
-  <hr/>
   <transition name="fade">
     <router-view/>
   </transition>
