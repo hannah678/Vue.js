@@ -1,5 +1,6 @@
-import { fetchAskList, fetchJobsList, fetchNewsList } from '@/api'
 import { createStore } from 'vuex'
+import mutations from './mutations.js'
+import actions from './actions.js'
 
 export default createStore({
   state: {
@@ -8,35 +9,12 @@ export default createStore({
      ask: [],
   },
   getters: {
-  },
-  mutations: {
-    SET_NEWS(state, news){
-      state.news = news;
-    },
-    SET_JOBS(state, jobs){
-      state.jobs = jobs;
+    fetchedAsk(state){
+      return state.ask;
     }
   },
-  actions: {
-    FETCH_NEWS(context){
-      fetchNewsList()
-      .then(response => {
-        context.commit('SET_NEWS', response.data);
-        })
-      .catch(error => console.log(error))
-    },
-    FETCH_JOBS({ commit }){
-      fetchJobsList()
-      .then(({ data }) => {
-        commit('SET_JOBS', data);
-      })
-      .catch(error => console.log(error));
-    },
-    FETCH_ASK(){
-      fetchAskList()
-      .then(response => this.state.ask = response.data);
-    }
-  },
+  mutations,
+  actions,
   modules: {
   }
 })
