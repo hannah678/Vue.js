@@ -6,7 +6,8 @@ export default createStore({
   state: {
      news: [],
      jobs: [],
-     ask: [],
+     ask: [], //리스트라서 []
+     user: {}, //리스트 아닌 객체라서 {}
   },
   getters: {
     fetchedAsk(state){
