@@ -19,7 +19,7 @@ import { authenticateUser } from './utils/auth.js';
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 mongoose.connect(
-  'mongodb://test:1234@ac-wjdzovy-shard-00-00.zkh3hbt.mongodb.net:27017,ac-wjdzovy-shard-00-01.zkh3hbt.mongodb.net:27017,ac-wjdzovy-shard-00-02.zkh3hbt.mongodb.net:27017/?ssl=true&replicaSet=atlas-81jkj3-shard-0&authSource=admin&retryWrites=true&w=majority',
+  'mongodb+srv://test:1234@cluster0-ypgh5.mongodb.net/test?retryWrites=true&w=majority',
   {
     useNewUrlParser: true,
   },
